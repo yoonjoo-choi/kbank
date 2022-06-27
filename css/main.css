@@ -1,0 +1,336 @@
+.inner {
+  width: 960px;
+  margin: auto;
+  padding: 0 10px;
+}
+#wrap {
+  line-height: 1.35;
+  min-width: 960px;
+  color: #172234;
+}
+/* 헤더 영역 */
+header .top {
+  background-color: #f7f8f3;
+  border-bottom: 1px solid #eeeeec;
+  text-align: right;
+}
+header .top .login {
+  padding: 8px 0 8px 0;
+  font-size: 14px;
+  color: #8f8f91;
+  display: inline-block;
+}
+header .hd .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .hd .logo {
+  padding: 15px 0;
+}
+header .hd .gnb .main {
+  display: flex;
+}
+header .hd .gnb .main > li {
+  padding: 0 16px;
+}
+header .hd .gnb .main > li > a {
+  font-weight: bold;
+}
+header .hd .gnb .main > li > a:hover {
+  color: #e65e72;
+}
+header .hd .gnb .main > li:last-child > a {
+  color: #8d8582;
+}
+header .hd .gnb .main > li.active > a {
+  color: #e65e72;
+}
+header .hd .gnb .main > li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #e65e72;
+  margin: auto;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+header .hd .gnb .main > li:hover::after {
+  width: 100%;
+}
+.hd .sub {
+  display: none;
+  z-index: 100;
+}
+header .hd .gnb .sub {
+  font-size: 14px;
+  position: absolute;
+  top: 95px;
+  left: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 28px 0;
+  box-shadow: 0 5px 10px rgba(100, 100, 100, 0.5);
+}
+header .hd .gnb .sub .inner {
+  justify-content: center;
+}
+header .hd .gnb .sub .inner ul {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+header .hd .gnb .sub li {
+  border-right: 1px solid #eaeaea;
+  padding: 0 16px;
+  width: 156px;
+}
+header .hd .gnb .sub li:last-child {
+  border: none;
+}
+header .hd .gnb .sub .inner .tit {
+  display: block;
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+header .hd .gnb .sub .inner li a {
+  padding: 5px 0;
+  letter-spacing: -1.5px;
+}
+header .hd .gnb .sub .inner li a:hover {
+  color: #e65e72;
+}
+
+/* 검색영역 */
+header .search {
+  z-index: 100;
+}
+header .search .search_box {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+header .search .search_box .inbox {
+  background-color: #fff;
+  width: 500px;
+  height: 550px;
+  margin: 10% auto;
+  position: relative;
+}
+header .search_box .tit {
+  font-size: 18px;
+  padding: 10px 20px;
+  border-bottom: 1px solid #c7c9d6;
+}
+header .search_box .tabmenu {
+  display: flex;
+  position: relative;
+}
+header .search_box .tabmenu > li {
+  flex: 1;
+  text-align: center;
+  border-bottom: 1px solid #a6a6a6;
+}
+header .search_box .tabmenu > li > a {
+  padding: 10px 0;
+  color: #7f939e;
+}
+header .search_box .tabmenu > li > a.active {
+  color: #e65e72;
+  border-bottom: 3px solid #e65e72;
+  font-weight: bold;
+}
+header .search_box .tabmenu > li div {
+  position: absolute;
+  top: 46px;
+  left: 0;
+  width: 100%;
+  text-align: left;
+  background-color: #f3f3f3;
+  padding: 10px;
+  display: none;
+}
+small {
+  font-size: 12px;
+  color: #7d7d7d;
+  display: block;
+  margin-top: 10px;
+}
+header .search_box .tabmenu > li div.con1 {
+  display: block;
+}
+header .search_box .tabmenu > li div.con1 form input {
+  width: 100%;
+  color: #fff;
+  background-color: #8294a0;
+  border: none;
+  padding: 10px 40px 10px 10px;
+}
+header .search_box .tabmenu > li div.con1 form input::placeholder {
+  color: #fff;
+}
+header .search_box .tabmenu > li div.con1 form button {
+  position: absolute;
+  top: 17px;
+  right: 16px;
+}
+header .search_box .btn_close {
+  font-size: 34px;
+  position: absolute;
+  top: 4px;
+  right: 10px;
+}
+
+/* visual 영역 */
+.visual {
+  position: relative;
+}
+.visual .quick {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+}
+.visual .quick ul {
+  display: flex;
+  width: 700px;
+  background-color: rgba(255, 255, 255, 0.503);
+  margin: auto;
+  padding: 12px;
+}
+.visual .quick ul li {
+  flex: 1;
+  text-align: center;
+  padding: 0 2px;
+}
+.visual .quick ul li a {
+  background-color: #fff;
+  padding: 10px 0;
+  transition: 0.2s;
+}
+.visual .quick ul li a:hover {
+  background-color: #979088;
+  color: #fff;
+}
+
+/* 최근게시판 영역 */
+.boards {
+  padding: 50px 0;
+  display: flex;
+}
+.boards > div {
+  padding: 0 16px;
+  flex: 1;
+  position: relative;
+}
+.boards > div h2 {
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+.boards .b_event h2 {
+  color: #1a5fa4;
+}
+.boards > div ul {
+  font-size: 14px;
+}
+.boards > div ul li {
+  padding: 4px 0;
+}
+.boards > div ul li span.date {
+  font-size: 13px;
+  color: #8d9298;
+  padding-bottom: 4px;
+}
+.boards > div ul li a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 256px;
+}
+.boards > div .more {
+  font-size: 12px;
+  position: absolute;
+  top: 4px;
+  right: 20px;
+  color: #8d9298;
+}
+.boards .b_event {
+  border-left: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+}
+
+/* 이벤트배너 영억 */
+.event ul {
+  display: flex;
+}
+.event ul li:first-child {
+  margin-right: 10px;
+}
+
+/* 푸터영역 */
+footer {
+  margin-top: 100px;
+  background-color: #454d5a;
+  color: #fff;
+  font-size: 14px;
+}
+footer .inner {
+  display: flex;
+}
+footer .inner .ft {
+  width: 800px;
+}
+footer .inner .ft p.c_center {
+  font-weight: bold;
+  padding: 28px 0;
+}
+footer .inner .ft p.c_center span:first-child {
+  padding-right: 20px;
+}
+footer .inner .ft ul.ft_menu {
+  display: flex;
+  justify-content: space-between;
+}
+footer .inner .ft ul.ft_menu li {
+  position: relative;
+}
+footer .inner .ft ul.ft_menu li::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 70%;
+  background-color: #fff;
+  position: absolute;
+  top: 3px;
+  right: -11px;
+}
+footer .inner .ft ul.ft_menu li:last-child::after {
+  display: none;
+}
+footer .inner .ft p.copy {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.566);
+  padding: 12px 0 30px 0;
+}
+footer .inner .ft p.access {
+  display: flex;
+  margin-bottom: 50px;
+  font-size: 13px;
+}
+footer .inner .ft p.access img {
+  margin-right: 8px;
+}
+footer .inner .sns {
+  margin-top: 20px;
+}
+footer .inner .sns ul {
+  display: flex;
+}
+footer .inner .sns ul li a {
+  padding: 8px;
+}
